@@ -18,3 +18,9 @@
     background: #282c34;
     transition: .3s all ease;
 }
+
+.info {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #fff;
+}
