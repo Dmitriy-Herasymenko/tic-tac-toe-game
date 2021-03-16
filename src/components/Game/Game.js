@@ -3,6 +3,7 @@ import './game.css';
 import Board from "../Board/Board";
 import {calculateWinner} from "../../utils";
 
+
 const Game = () => {
     const [board, setBoard] = useState(Array(25).fill(null));
     const [xIsNext, setXIsNext] = useState(true);
@@ -12,7 +13,7 @@ const Game = () => {
         const boards = [...board];
 
         if(winner || boards[index]) return;
-        boards[index] = xIsNext ? 'x' : 'o';
+        boards[index] = xIsNext ? 'X' : 'O';
         setBoard(boards);
         setXIsNext(!xIsNext);
     };
@@ -27,7 +28,7 @@ const Game = () => {
         <div className='wrapper'>
             { newGame() }
             <p className='info'>
-                { winner ? 'Winner' + ' ' + winner : 'Now step' + ' ' + (xIsNext ? 'X' : 'O')}
+                { winner ? 'Winner ' + winner : 'Now step ' + (xIsNext ? 'X' : 'O')}
             </p>
             <Board squares={board} click={handleClick}/>
 

@@ -1,17 +1,19 @@
 .square {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100px;
     height: 100px;
-    background: #fff;
-    border: 1px solid #222;
+    background: #495e76;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #68d8fd;
     cursor: pointer;
     outline: none;
     font-size: 24px;
 }
 
 .square:hover {
-    background: #282c34;
+    background: #6a707b;
     transition: .3s all ease;
+}
+
+.square-circle{
+    color: #fe9ff3;
 }

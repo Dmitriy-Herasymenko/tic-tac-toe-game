@@ -1,9 +1,12 @@
 .board {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 500px;
     height: 500px;
-    background:  #fff;
+    background:  #495e76;
+    color: #fff;
+    padding: 50px;
 }
 
 .start_btn {
