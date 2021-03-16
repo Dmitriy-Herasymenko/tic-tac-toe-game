@@ -4,7 +4,7 @@ import Board from "../Board/Board";
 import {calculateWinner} from "../../utils";
 
 const Game = () => {
-    const [board, setBoard] = useState(Array(9).fill(null));
+    const [board, setBoard] = useState(Array(25).fill(null));
     const [xIsNext, setXIsNext] = useState(true);
     const winner = calculateWinner(board);
 
@@ -15,21 +15,22 @@ const Game = () => {
         boards[index] = xIsNext ? 'x' : 'o';
         setBoard(boards);
         setXIsNext(!xIsNext);
-    }
+    };
 
     const newGame = () => {
         return (
-            <button className='start_btn' onClick={() => setBoard(Array(9).fill(null))}>Reset Game</button>
+            <button className='start_btn' onClick={() => setBoard(Array(25).fill(null))}>Reset Game</button>
         )
-    }
+    };
 
     return (
         <div className='wrapper'>
             { newGame() }
-            <Board squares={board} click={handleClick}/>
             <p className='info'>
                 { winner ? 'Winner' + ' ' + winner : 'Now step' + ' ' + (xIsNext ? 'X' : 'O')}
             </p>
+            <Board squares={board} click={handleClick}/>
+
         </div>
     )
 }
