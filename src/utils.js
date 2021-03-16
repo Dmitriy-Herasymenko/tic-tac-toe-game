@@ -1,5 +1,16 @@
 export function calculateWinner(squares) {
-    const lines = [
+
+    const  lines3x3 = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
+    const lines5x5 = [
         [0, 1, 2, 3, 4],
         [5, 6, 7, 8, 9],
         [10, 11, 12,13, 14],
@@ -30,23 +41,28 @@ export function calculateWinner(squares) {
         [8, 12, 16, 20],
 
     ];
-    console.log(lines)
+    const lines = squares.length === 25 ? lines5x5 : lines3x3;
+
     for (let i = 0; i < lines.length; i++) {
-        const [a, b, c, d, e] = lines[i];
-        if (squares[a]
-            && squares[a] === squares[b]
-            && squares[a] === squares[c]) {
-            return squares[a]
+
+        if(squares.length === 9) {
+            const [a, b, c] = lines[i];
+            if (squares[a]
+                && squares[a] === squares[b]
+                && squares[a] === squares[c]) {
+                return squares[a]
+            }
         }
-        if (squares[b]
-            && squares[b] === squares[c]
-            && squares[b] === squares[d]) {
-            return squares[b]
-        }
-        if(squares[e]
-        && squares[e] === squares[d]
-        && squares[e] === squares[c]) {
-            return squares[e]
+
+        if(squares.length === 25) {
+            const [a, b, c, d, e] = lines[i];
+            if (squares[a]
+                && squares[a] === squares[b]
+                && squares[a] === squares[c]
+                && squares[a] === squares[d]
+                && squares[a] === squares[e]) {
+                return squares[a]
+            }
         }
     }
     return null
