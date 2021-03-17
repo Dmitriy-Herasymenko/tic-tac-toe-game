@@ -1,6 +1,6 @@
 export function calculateWinner(squares) {
 
-    const  lines3x3 = [
+    const lines3x3 = [
         [0, 1, 2],
         [3, 4, 5],
         [6, 7, 8],
@@ -13,8 +13,8 @@ export function calculateWinner(squares) {
     const lines5x5 = [
         [0, 1, 2, 3, 4],
         [5, 6, 7, 8, 9],
-        [10, 11, 12,13, 14],
-        [15, 16, 17,18, 19],
+        [10, 11, 12, 13, 14],
+        [15, 16, 17, 18, 19],
         [20, 21, 22, 23, 24],
 
         [0, 5, 10, 15, 20],
@@ -44,8 +44,7 @@ export function calculateWinner(squares) {
     const lines = squares.length === 25 ? lines5x5 : lines3x3;
 
     for (let i = 0; i < lines.length; i++) {
-
-        if(squares.length === 9) {
+        if (squares.length === 9) {
             const [a, b, c] = lines[i];
             if (squares[a]
                 && squares[a] === squares[b]
@@ -54,7 +53,7 @@ export function calculateWinner(squares) {
             }
         }
 
-        if(squares.length === 25) {
+        if (squares.length === 25) {
             const [a, b, c, d, e] = lines[i];
             if (squares[a]
                 && squares[a] === squares[b]
