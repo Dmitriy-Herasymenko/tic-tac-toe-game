@@ -8,7 +8,7 @@ const Board = ({squares, click}) => {
         <div className={styleBoard}>
             {
                 squares.map((square, i) => (
-                    <Square key={i} value={square} onClick={() => click(i) }/>
+                    <Square key={i} value={square} style={squares.length} onClick={() => click(i) }/>
                 ))
             }
         </div>

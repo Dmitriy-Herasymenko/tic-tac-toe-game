@@ -2,7 +2,7 @@
     width: 100px;
     height: 100px;
     background: #495e76;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: #68d8fd;
     cursor: pointer;
     outline: none;
@@ -14,7 +14,7 @@
     transition: .3s all ease;
 }
 
-.square-circle{
+.square-circle {
     color: #fe9ff3;
 }
 
@@ -23,21 +23,21 @@
 }
 
 @media (max-width: 768px) {
-    .square{
+    .square-medium {
         width: 80px;
         height: 80px;
     }
 }
 
 @media (max-width: 510px) {
-    .square{
+    .square-medium {
         width: 50px;
         height: 50px;
     }
 }
 
 @media (max-width: 323px) {
-    .square{
+    .square-medium {
         width: 40px;
     }
 }

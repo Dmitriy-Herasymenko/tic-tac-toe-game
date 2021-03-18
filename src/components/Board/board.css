@@ -2,17 +2,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background:  #495e76;
+    background: #495e76;
     color: #fff;
     padding: 50px;
 }
 
-.smallBoard{
+.smallBoard {
     width: 300px;
     height: 300px;
 }
 
-.mediumBoard{
+.mediumBoard {
     width: 500px;
     height: 500px;
 }
@@ -25,7 +25,7 @@
     outline: none;
 }
 
-.start_btn:hover{
+.start_btn:hover {
     background: #282c34;
     transition: .3s all ease;
 }
@@ -37,21 +37,21 @@
 }
 
 @media (max-width: 768px) {
-    .mediumBoard{
+    .mediumBoard {
         width: 400px;
         height: 400px;
     }
 }
 
 @media (max-width: 510px) {
-    .mediumBoard{
+    .mediumBoard {
         width: 250px;
         height: 250px;
     }
 }
 
 @media (max-width: 323px) {
-    .mediumBoard{
+    .mediumBoard {
         width: 220px;
     }
 }
