@@ -35,3 +35,23 @@
     font-size: 24px;
     color: #fff;
 }
+
+@media (max-width: 768px) {
+    .mediumBoard{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 510px) {
+    .mediumBoard{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 323px) {
+    .mediumBoard{
+        width: 220px;
+    }
+}
